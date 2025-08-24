@@ -1,0 +1,39 @@
+/* /src/pages/admin/AdminViewTransactions.css */
+/* CSS baayyee isa UserManagement.css wajjin walfakkaata */
+
+.view-transactions-container {
+    padding: 1.5rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+}
+
+.page-header h1 { font-size: 1.8rem; }
+.page-header p { color: var(--text-secondary); margin: 0.5rem 0 1.5rem 0; }
+
+.filter-controls {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: flex-end;
+}
+.filter-controls select {
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    background-color: var(--main-bg);
+    color: var(--text-primary);
+}
+
+.table-wrapper { overflow-x: auto; }
+.custom-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.custom-table th, .custom-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border-color); }
+.custom-table thead th { background-color: var(--main-bg); font-weight: 600; color: var(--text-secondary); }
+
+/* Status */
+.status { padding: 0.3rem 0.6rem; border-radius: 20px; font-size: 0.75rem; text-transform: capitalize; }
+.status.completed { background-color: rgba(40, 167, 69, 0.1); color: #28a745; }
+.status.pending { background-color: rgba(255, 193, 7, 0.1); color: #ffc107; }
+.status.system { background-color: rgba(108, 117, 125, 0.1); color: #6c757d; }
+
+/* Amount */
+.amount-deposit { color: var(--green); font-weight: 500; }
+.amount-withdraw { color: var(--danger-color); font-weight: 500; }

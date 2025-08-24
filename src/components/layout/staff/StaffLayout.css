@@ -1,0 +1,20 @@
+/* Diizaayinii Waliigalaa fi Theme */
+:root {
+  --primary-color: #007bff;
+  --primary-color-light: #e6f2ff;
+  --danger-color: #dc3545;
+  --green: #28a745; --red: #dc3545; --blue: #007bff; --purple: #6f42c1;
+}
+body[data-theme='light'] {
+  --main-bg: #f4f7f9; --card-bg: #ffffff; --sidebar-bg: #ffffff;
+  --text-primary: #212529; --text-secondary: #6c757d; --border-color: #e9ecef;
+}
+body[data-theme='dark'] {
+  --main-bg: #1a1a1a; --card-bg: #2a2a2a; --sidebar-bg: #2a2a2a;
+  --text-primary: #f8f9fa; --text-secondary: #adb5bd; --border-color: #495057;
+}
+body { background-color: var(--main-bg); color: var(--text-primary); transition: background-color 0.3s, color 0.3s;}
+/* Caasaa Waliigalaa */
+.staff-layout { display: flex; }
+.main-container { flex-grow: 1; margin-left: 260px; /* Bal'ina Sidebar wajjin walqixa */ }
+.content-area { padding: 2rem; }

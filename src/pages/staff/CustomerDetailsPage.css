@@ -1,0 +1,122 @@
+/* /src/pages/staff/CustomerDetailsPage.css */
+
+.customer-details-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+/* Kaardii waliigalaa */
+.details-card {
+    background-color: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    border: 1px solid var(--border-color);
+    margin-bottom: 1.5rem;
+}
+.details-card h3 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 0.75rem;
+}
+
+/* Kutaa Bitaa: Piroofaayilii */
+.profile-header {
+    text-align: center;
+}
+.profile-header img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid var(--primary-color);
+    margin-bottom: 1rem;
+}
+.profile-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.profile-header p {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+.edit-btn {
+    margin-top: 1rem;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Odeeffannoo yeroo view mode */
+.view-info p {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin: 0.8rem 0;
+    color: var(--text-secondary);
+}
+.view-info p strong {
+    color: var(--text-primary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Foormii yeroo edit mode */
+.edit-form .form-group { margin-bottom: 1rem; }
+.edit-form .form-group label { display: block; margin-bottom: 0.5rem; color: var(--text-secondary); }
+.edit-form .form-group input { width: 100%; padding: 0.75rem; border-radius: 8px; border: 1px solid var(--border-color); background-color: var(--main-bg); color: var(--text-primary); }
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+}
+.form-actions .action-btn { flex-grow: 1; padding: 0.75rem; }
+.action-btn.save { background-color: var(--green); color: #fff; }
+.action-btn.cancel { background-color: var(--border-color); color: var(--text-secondary); }
+
+
+/* Kutaa Mirgaa: Herrega */
+.summary-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+.summary-grid p { margin: 0.5rem 0; display: flex; flex-direction: column; }
+.summary-grid p strong { font-weight: 500; color: var(--text-secondary); font-size: 0.9rem; }
+.summary-grid p span { font-size: 1.2rem; font-weight: 600; }
+
+.mini-transactions-table { width: 100%; border-collapse: collapse; }
+.mini-transactions-table td { padding: 0.75rem 0; border-bottom: 1px solid var(--border-color); }
+.mini-transactions-table tr:last-child td { border-bottom: none; }
+.amount-deposit { color: var(--green); }
+.amount-withdraw { color: var(--danger-color); }
+
+
+/* Responsive */
+@media (max-width: 992px) {
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}

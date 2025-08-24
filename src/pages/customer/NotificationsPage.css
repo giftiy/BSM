@@ -1,0 +1,221 @@
+/* =================================================================
+   FUULA "NOTIFICATIONS" - CSS Kan Of Danda'e
+   ================================================================= */
+
+/* Konteenerii Guddaa Fuula Kanaaf */
+.notification-page-container {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1rem; /* Padding keessaa xiqqeefameera */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Mata-duree Fuulaa */
+.page-header {
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.page-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.page-header p {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  color: var(--text-secondary);
+}
+
+/* Gochaawwan Beeksisootaa (fkn. Clear All) */
+.notification-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+.clear-all-btn {
+    background: none;
+    border: 1px solid var(--danger-color);
+    color: var(--danger-color);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background-color 0.2s, color 0.2s;
+}
+.clear-all-btn:hover {
+    background-color: var(--danger-color);
+    color: #fff;
+}
+
+/* Tarreeffama Beeksisootaa */
+.notification-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+  transition: background-color 0.2s;
+}
+.notification-item:last-child {
+  border-bottom: none;
+}
+
+/* Beeksisoota hin dubbifamne */
+.notification-item.unread {
+  background-color: var(--primary-color-light);
+  cursor: pointer; /* Akka tuqamuu danda'u agarsiisa */
+  font-weight: 600; /* Barruun akka furdatu taasisa */
+}
+body[data-theme='dark'] .notification-item.unread {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+.notification-item:not(.unread):hover {
+    background-color: var(--hover-bg);
+}
+
+/* Mallattoo (Icon) Beeksisootaa */
+.notification-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0; /* Akka hin qiqixanneef */
+}
+.notification-icon.success { background-color: rgba(40, 167, 69, 0.1); color: var(--green); }
+.notification-icon.warning { background-color: rgba(255, 193, 7, 0.1); color: #ffc107; }
+.notification-icon.info { background-color: rgba(0, 123, 255, 0.1); color: var(--primary-color); }
+
+/* Qabiyyee Beeksisootaa */
+.notification-content {
+  flex-grow: 1;
+}
+.notification-content p {
+  margin: 0 0 0.25rem 0;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+.notification-content small {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+/* Tuqaa Diimaa kan beeksisoota hin dubbifamne agarsiisu */
+.unread-dot {
+    width: 10px;
+    height: 10px;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+    margin-left: auto; /* Gara mirgaatti siqsa */
+}
+
+/* Yoo beeksisni hin jiru ta'e */
+.no-notifications {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+    border: none;
+}
+/* ==============================
+   NOTIFICATION MODAL STYLE
+   ============================== */
+.notification-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6); /* background overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Box keessaa */
+.modal-content {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease-in-out;
+}
+
+/* Title */
+.modal-content h2 {
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+/* Text */
+.modal-content p {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: 0.75rem;
+}
+
+.modal-content small {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+/* Close Button */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  font-size: 1.4rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: var(--danger-color);
+}
+
+/* Icon */
+.modal-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-icon.success { color: var(--green); }
+.modal-icon.warning { color: #ffc107; }
+.modal-icon.info { color: var(--primary-color); }
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

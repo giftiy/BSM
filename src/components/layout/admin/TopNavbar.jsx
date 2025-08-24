@@ -1,0 +1,36 @@
+// Faayilii: /src/components/layout/staff/TopNavbar.jsx
+
+import React from 'react';
+import { FaSearch, FaSun, FaMoon } from 'react-icons/fa';
+
+// VVVV --- Koodii kana akkuma jirutti waraabaa (COPY PASTE godhaa) --- VVVV
+import UserProfileDropdown from '/src/components/layout/common/UserProfileDropdown.jsx';
+// AAAA ------------------------------------------------------------------- AAAA
+
+import './TopNavbar.css';
+
+const TopNavbar = ({ onThemeToggle, theme, searchTerm, onSearchChange }) => {
+  // ... koodiin keessan inni hafe akkuma duraanitti ...
+  return (
+    <header className="top-navbar">
+      <div className="search-wrapper">
+        <FaSearch className="search-icon" />
+        <input
+          type="text"
+          className="search-bar"
+          placeholder="Search for customers by name..."
+          value={searchTerm}
+          onChange={onSearchChange}
+        />
+      </div>
+      <div className="navbar-actions">
+        <button className="theme-toggle-btn" onClick={onThemeToggle} aria-label="Toggle theme">
+          {theme === 'light' ? <FaMoon /> : <FaSun />}
+        </button>
+        <UserProfileDropdown />
+      </div>
+    </header>
+  );
+};
+
+export default TopNavbar;

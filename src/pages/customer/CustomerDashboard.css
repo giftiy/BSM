@@ -1,0 +1,92 @@
+/* Faayilii: /src/pages/customer/CustomerDashboard.css (Kan Guutummaatti Haaromfame) */
+
+.customer-dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem;
+}
+
+/* Mata-duree Fuulaa */
+.page-header {
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.page-header h1 { font-size: 1.6rem; }
+.page-header p { font-size: 0.9rem; margin-top: 0.2rem; color: var(--text-secondary); }
+
+/* Kaardiiwwan Istaatistiksii */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+.stat-card {
+  background-color: var(--card-bg);
+  padding: 0.75rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+.stat-card.clickable { cursor: pointer; }
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #fff;
+}
+.stat-icon.wallet { background-color: var(--primary-color); }
+.stat-icon.active-status { background-color: var(--green); }
+.stat-icon.frozen-status { background-color: var(--danger-color); }
+.stat-icon.cardless { background-color: #17a2b8; }
+.stat-icon.notification { background-color: #ffc107; }
+
+.stat-info h3 { font-size: 0.75rem; color: var(--text-secondary); }
+.stat-info p { font-size: 1.2rem; font-weight: 600; }
+.text-success { color: var(--green); }
+.text-danger { color: var(--danger-color); }
+
+/* Kutaa Gurguddaa (Chaartii fi Daldala) */
+.dashboard-main-grid {
+  display: grid;
+  grid-template-columns: 2fr 1.2fr;
+  gap: 1rem;
+}
+.dashboard-card {
+  background-color: var(--card-bg);
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--border-color);
+  min-height: auto;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.card-header {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1rem;
+}
+
+/* Tarreeffama Daldalaa */
+.transaction-list { list-style: none; padding: 0; margin: 0; overflow-y: auto; flex-grow: 1; }
+.transaction-item { display: flex; align-items: center; padding: 0.6rem 0.25rem; border-bottom: 1px solid var(--border-color); }
+.transaction-item:last-child { border-bottom: none; }
+.transaction-icon { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.transaction-icon.income { background-color: rgba(40, 167, 69, 0.1); color: var(--green); }
+.transaction-icon.expense { background-color: rgba(220, 53, 69, 0.1); color: var(--danger-color); }
+.transaction-details { flex-grow: 1; margin-left: 0.8rem; }
+.transaction-details span { font-weight: 500; font-size: 0.9rem; }
+.transaction-details small { color: var(--text-secondary); font-size: 0.8rem; }
+.transaction-amount { font-weight: 600; font-size: 0.9rem; }
+.transaction-amount.income { color: var(--green); }
+.transaction-amount.expense { color: var(--danger-color); }

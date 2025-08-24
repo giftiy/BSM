@@ -1,0 +1,103 @@
+/* =================================================================
+   FUULA "MY TRANSACTIONS" - CSS Kan Of Danda'e
+   ================================================================= */
+
+/* Konteenerii Guddaa Fuula Kanaaf */
+.transactions-page-container {
+  background-color: var(--card-bg); /* Bifa akka kaardiitti fayyadama */
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+}
+
+/* Mata-duree Fuulaa */
+.page-header {
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.page-header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.page-header p {
+  font-size: 1rem;
+  margin-top: 0.25rem;
+  color: var(--text-secondary);
+}
+
+/* Waraabbii Gabatee (Table Wrapper) */
+.transactions-table-wrapper {
+  overflow-x: auto; /* Yoo gabateen bal'ate, akka scroll ta'uuf */
+}
+
+/* Gabatee Daldalaa (Transactions Table) */
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse; /* Sararoota gidduu jiran tokkoomsa */
+  font-size: 0.9rem;
+}
+
+/* Mataa fi Qaama Gabatee */
+.transactions-table th, 
+.transactions-table td {
+  padding: 1rem 1.25rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* Mataa Gabatee (Table Head) */
+.transactions-table thead th {
+  background-color: var(--main-bg); /* Bifa laafaa */
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+/* Qaama Gabatee (Table Body) */
+.transactions-table tbody tr:last-child td {
+  border-bottom: none; /* Sarara isa dhumaa jalaa haqa */
+}
+
+.transactions-table tbody tr:hover {
+  background-color: var(--hover-bg); /* Yommuu mouse irratti geessan */
+}
+
+/* Gosa Daldalaa (Transaction Type) */
+.transaction-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.transaction-type.credit {
+  color: var(--green);
+}
+.transaction-type.debit {
+  color: var(--danger-color);
+}
+
+/* Button Buufachuu (Download Button) */
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  color: var(--text-primary);
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.download-btn:hover {
+  background-color: var(--primary-color-light);
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}

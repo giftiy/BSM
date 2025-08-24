@@ -1,0 +1,106 @@
+/* =================================================================
+   TOP NAVIGATION BAR STYLING
+   ================================================================= */
+
+/* Konteenerii Guddaa Navbar */
+.top-navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 2rem; /* Padding hir'ifameera */
+  background-color: var(--card-bg);
+  border-bottom: 1px solid var(--border-color);
+  height: 64px; /* Dheerina dhaabbataa kenneeraaf */
+  position: sticky; /* Akka gubbaatti maxxanee hafuuf */
+  top: 0;
+  z-index: 999;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+
+/* =================================================================
+   Kutaa Barbaachaa (Search Wrapper)
+   ================================================================= */
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 450px;
+}
+
+.search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  z-index: 2;
+}
+
+.search-bar {
+  width: 100%;
+  padding: 0.7rem 1rem 0.7rem 2.5rem; /* Padding bitaa icon-iif iddoo kenna */
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  background-color: var(--main-bg); /* Akka qaama gobootti walfakkaata */
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.search-bar:focus {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}
+
+
+/* =================================================================
+   Gochaawwan Navbar (Actions: Theme, Profile)
+   ================================================================= */
+.navbar-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem; /* Fageenya icon theme fi piroofaayilii gidduu */
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  font-size: 1.25rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  padding: 0.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s, background-color 0.2s;
+}
+
+.theme-toggle-btn:hover {
+  color: var(--text-primary);
+  background-color: rgba(0,0,0,0.05);
+}
+
+body[data-theme='dark'] .theme-toggle-btn:hover {
+    background-color: rgba(255,255,255,0.1);
+}
+
+
+/* =================================================================
+   RESPONSIVE (Yeroo Screen Jijjiiramu)
+   ================================================================= */
+@media (max-width: 768px) {
+  .top-navbar {
+    padding: 0.75rem 1rem;
+  }
+  
+  .search-wrapper {
+    /* Yoo barbaachisaa ta'e, search bar xiqqeessuu ykn dhoksuu dandeenya */
+    max-width: 250px;
+  }
+  
+  .navbar-actions {
+    gap: 0.75rem;
+  }
+}

@@ -1,0 +1,122 @@
+/* /src/assets/styles/DashboardStyles.css */
+
+/* === KUTAA DURAANII KAN POPOVERS JEDHU HAQII, KANAAN BAKKA BUUSI === */
+
+/*
+ * ===========================================
+ *   POPOVERS (PROFESSIONAL & COMPACT REDESIGN)
+ * ===========================================
+ */
+
+/* 5.1 - PARENT-TTI POSITION KENNUU (Akkuma duraanii barbaachisaadha) */
+.navbar-actions {
+  position: relative; 
+}
+
+/* 5.2 - POPOVER XIQQEESSUU, AMMAYYEESSUU, FI ANIMATION DABALUU */
+.notification-popover, .profile-dropdown {
+  position: absolute;
+  top: calc(100% + 12px);
+  right: 0;
+  width: 320px; /* Bal'ina xiqqeesseera */
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  /* Gaaddidduu ammayyaa'aa fi laafaa */
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(-10px) scale(0.98); /* Animation-iif */
+  transition: opacity 0.2s ease-out, transform 0.2s ease-out;
+  visibility: hidden;
+}
+
+.notification-popover.open, .profile-dropdown.open {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+}
+
+.popover-header {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+.popover-header h4 {
+  margin: 0;
+  font-size: 0.85rem; /* xiqqeesseera */
+  font-weight: 600;
+}
+
+.popover-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 320px; /* Yoo baayyate akka scroll qabaatuuf */
+  overflow-y: auto;
+}
+
+/* SCROLLBAR AMMAYYEESSUU (Akka inni hin mul'anne yoo hin barbaachifne) */
+.popover-list::-webkit-scrollbar {
+  width: 6px;
+}
+.popover-list::-webkit-scrollbar-thumb {
+  background-color: var(--border-color);
+  border-radius: 6px;
+}
+.popover-list::-webkit-scrollbar-thumb:hover {
+  background-color: var(--text-secondary);
+}
+
+.popover-list li {
+  display: flex;
+  gap: 0.75rem; /* xiqqeesseera */
+  padding: 0.75rem 1rem; /* xiqqeesseera */
+  border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  transition: background-color 0.2s;
+  position: relative;
+}
+.popover-list li:last-child { border-bottom: none; }
+.popover-list li:hover { background-color: var(--page-bg); }
+
+.popover-list li.unread .popover-list-content p {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.popover-list-icon {
+  font-size: 0.9rem; /* xiqqeesseera */
+  color: var(--text-secondary);
+  margin-top: 3px;
+  flex-shrink: 0;
+}
+
+.popover-list-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.popover-list-content p {
+  margin: 0;
+  font-size: 0.8rem; /* xiqqeesseera */
+  line-height: 1.4;
+  color: var(--text-primary);
+}
+.popover-list-content small {
+  font-size: 0.7rem; /* xiqqeesseera */
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.popover-footer {
+  padding: 0.6rem; /* xiqqeesseera */
+  text-align: center;
+  font-weight: 500;
+  font-size: 0.8rem;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--page-bg);
+}
+.popover-footer a {
+  color: var(--accent-primary);
+  text-decoration: none;
+}

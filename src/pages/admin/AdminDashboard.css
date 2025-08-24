@@ -1,0 +1,67 @@
+/* =================================================================
+   ADMIN DASHBOARD: Dizayinii Guutummaatti Qindaa'e
+   ================================================================= */
+
+/* Konteenerii Guddaa */
+.admin-dashboard-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0.75rem 1.5rem; /* Padding guutummaatti hir'ate */
+}
+
+/* Mata-duree Fuulaa */
+.page-header {
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem; /* Fageenyi hir'ate */
+  border-bottom: 1px solid var(--border-color);
+}
+.page-header h1 { font-size: 1.6rem; }
+.page-header p { font-size: 0.9rem; margin-top: 0.2rem; }
+
+/* Kaardiiwwan Istaatistiksii */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem; /* Fageenyi hir'ate */
+  margin-bottom: 1rem; /* Fageenyi hir'ate */
+}
+.stat-card {
+  padding: 0.75rem; /* Padding hir'ate */
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid var(--border-color);
+}
+.stat-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 6px;
+  font-size: 1.1rem; /* Icon xiqqeefame */
+}
+.stat-icon.green { background-color: rgba(40, 167, 69, 0.1); color: #28a745; }
+.stat-icon.red { background-color: rgba(220, 53, 69, 0.1); color: #dc3545; }
+.stat-icon.blue { background-color: rgba(0, 123, 255, 0.1); color: #007bff; }
+.stat-icon.purple { background-color: rgba(111, 66, 193, 0.1); color: #6f42c1; }
+.stat-info h3 { font-size: 0.75rem; }
+.stat-info p { font-size: 1.2rem; }
+
+/* Chaartiiwwan */
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Yeroo hundumaa 2 haa ta'an */
+  gap: 1rem; /* Fageenyi hir'ate */
+}
+.chart-card {
+  background-color: var(--card-bg);
+  padding: 1rem 1.25rem; /* Padding hir'ate */
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+}
+.chart-card h3 {
+  margin-top: 0;
+  padding-bottom: 0.5rem; /* Fageenyi hir'ate */
+  margin-bottom: 0.75rem; /* Fageenyi hir'ate */
+  border-bottom: 1px solid var(--border-color);
+  font-size: 1rem;
+}

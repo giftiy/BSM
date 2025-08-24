@@ -1,0 +1,113 @@
+/* /src/pages/staff/TransactionsPage.css */
+
+.transaction-page-container {
+    padding: 1rem;
+    background-color: var(--card-bg);
+    border-radius: 12px;
+}
+
+.page-header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-primary);
+}
+.page-header p {
+    color: var(--text-secondary);
+    margin-bottom: 1.5rem;
+}
+
+.transaction-table-wrapper {
+    overflow-x: auto;
+}
+
+.transaction-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+
+.transaction-table th, .transaction-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.transaction-table thead th {
+    background-color: var(--main-bg);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.transaction-table tbody tr {
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.transaction-table tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+body[data-theme='dark'] .transaction-table tbody tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.status {
+    padding: 0.3rem 0.6rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+.status.completed { background-color: rgba(40, 167, 69, 0.1); color: #28a745; }
+.status.pending { background-color: rgba(255, 193, 7, 0.1); color: #ffc107; }
+.status.failed { background-color: rgba(220, 53, 69, 0.1); color: #dc3545; }
+
+
+/* Modal Styles */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal-content {
+    background: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+}
+.modal-header h2 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.close-button {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: var(--text-secondary);
+}
+
+.modal-body p {
+    margin: 0.8rem 0;
+    line-height: 1.6;
+}
+.modal-body strong {
+    color: var(--text-primary);
+}

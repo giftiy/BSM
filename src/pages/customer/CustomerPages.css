@@ -1,0 +1,96 @@
+/* Faayilii: /src/pages/customer/CustomerPages.css (Kan Guutummaatti Haaromfame) */
+
+/* =================================================================
+   KONTEENERII WALIINII KAN FUULA GIDDU-GALEESSATTI FIDU
+   ================================================================= */
+.page-wrapper {
+  /* VVVV --- FUULA GIDDU-GALEESSATTI FIDUUF --- VVVV */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Giddu-galeessa dhaabbataa */
+  align-items: center;    /* Giddu-galeessa dalgee */
+  min-height: calc(100vh - 128px); /* Dheerina Navbar gadi bu'a (64px topbar + padding) */
+  /* AAAA ----------------------------------- AAAA */
+}
+
+.page-container {
+  width: 100%; /* Bal'ina guutuu fudhata */
+  max-width: 1200px; /* Garuu yoo screen guddaa ta'e hin bal'atu */
+  padding: 0 1.5rem; /* Faageenya cinaa qofa kenna */
+}
+
+/* Mata-duree Fuulaa */
+.page-header {
+  padding-bottom: 0.75rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  text-align: center; /* Mata-dureenis giddu-galeessatti haa dhufu */
+}
+.page-header h1 { font-size: 1.6rem; }
+.page-header p { font-size: 0.9rem; color: var(--text-secondary); }
+
+/* =================================================================
+   FUULA "MY ACCOUNTS" (Kan Qindaa'e)
+   ================================================================= */
+.my-accounts-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1.5rem; /* Fageenya xiqqoo daballee, akka addaan bahan */
+  align-items: flex-start;
+}
+
+/* Kutaa Bitaa: Tarreeffama Herregaa */
+.account-list-section {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+}
+.account-list-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 0.25rem;
+}
+.account-list-item:hover, .account-list-item.selected { background-color: var(--primary-color-light); }
+.account-icon { font-size: 1.3rem; margin-right: 0.75rem; }
+.account-summary { flex-grow: 1; }
+.account-type { font-weight: 600; font-size: 0.9rem; }
+.account-number { font-size: 0.8rem; color: var(--text-secondary); }
+.account-balance-list { font-weight: 600; font-size: 0.9rem; }
+.account-list-item.add-new { color: var(--primary-color); font-weight: 600; justify-content: center; gap: 0.5rem; }
+
+/* Kutaa Mirgaa: Bal'ina Herregaa */
+.account-details-section {
+  background-color: var(--card-bg);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  padding: 1.25rem;
+}
+.details-card-header { display: flex; justify-content: space-between; align-items: center; padding-bottom: 0.75rem; border-bottom: 1px solid var(--border-color); }
+.details-card-header h2 { margin: 0; font-size: 1.2rem; }
+.account-status { padding: 0.25rem 0.6rem; border-radius: 15px; font-size: 0.7rem; font-weight: 600; }
+.account-status.active { background-color: rgba(40, 167, 69, 0.1); color: var(--green); }
+.account-status.frozen { background-color: rgba(255, 193, 7, 0.1); color: #ffc107; }
+
+.balance-showcase { text-align: center; padding: 1.5rem 0; }
+.balance-label { display: block; color: var(--text-secondary); font-size: 0.8rem; }
+.balance-amount { font-size: 2rem; font-weight: 700; }
+
+.quick-actions { display: flex; gap: 0.75rem; justify-content: center; padding-bottom: 1.25rem; border-bottom: 1px solid var(--border-color); }
+.quick-actions button { padding: 0.5rem 1rem; border: 1px solid var(--border-color); border-radius: 20px; background: none; cursor: pointer; font-size: 0.85rem; }
+.quick-actions button:hover { background-color: var(--hover-bg); }
+
+.recent-activity { padding-top: 1.25rem; }
+.recent-activity h3 { margin: 0 0 0.75rem 0; font-size: 1rem; }
+.recent-activity ul { list-style: none; padding: 0; }
+.recent-activity li { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid var(--border-color); }
+.recent-activity li:last-child { border-bottom: none; }
+.tx-info { display: flex; flex-direction: column; }
+.tx-desc { font-weight: 500; font-size: 0.9rem; }
+.tx-date { font-size: 0.8rem; color: var(--text-secondary); }
+.tx-amount { font-size: 0.9rem; }
+.tx-amount.income { color: var(--green); }
+.tx-amount.expense { color: var(--danger-color); }

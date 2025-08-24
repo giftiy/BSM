@@ -1,0 +1,16 @@
+/* /src/pages/admin/UserManagement.css */
+.user-management-container { padding: 1.5rem; background-color: var(--card-bg); border-radius: 12px; }
+.page-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; }
+.page-header h1 { font-size: 1.8rem; }
+.add-user-btn { background-color: var(--primary-color); color: #fff; border: none; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 600; cursor: pointer; display: inline-flex; align-items: center; gap: 0.5rem; }
+.table-wrapper { overflow-x: auto; }
+.custom-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+.custom-table th, .custom-table td { padding: 12px 15px; text-align: left; border-bottom: 1px solid var(--border-color); }
+.custom-table thead th { background-color: var(--main-bg); }
+.status { padding: 0.3rem 0.6rem; border-radius: 20px; font-size: 0.75rem; }
+.status.active { background-color: rgba(40, 167, 69, 0.1); color: #28a745; }
+.status.inactive { background-color: rgba(220, 53, 69, 0.1); color: #dc3545; }
+.actions-cell { display: flex; gap: 0.5rem; }
+.action-btn { background: none; border: none; cursor: pointer; display: inline-flex; align-items: center; gap: 0.4rem; padding: 0.4rem 0.8rem; border-radius: 6px; color: #fff; }
+.action-btn.edit { background-color: #ffc107; }
+.action-btn.delete { background-color: var(--danger-color); }

@@ -1,0 +1,98 @@
+/* ==================== GLOBAL VARIABLES ==================== */
+:root {
+  --page-bg-light: #f1f3f5;
+  --page-bg-dark: #121212;
+
+  --card-bg-light: #ffffff;
+  --card-bg-dark: #1e1e1e;
+
+  --text-primary-light: #000000;
+  --text-primary-dark: #ffffff;
+
+  --text-secondary-light: #555555;
+  --text-secondary-dark: #cccccc;
+
+  --accent-primary: #00adef;
+  --accent-hover: #0086ba;
+  --border-light: #ccc;
+  --border-dark: #444;
+}
+
+/* ==================== BODY ==================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--page-bg-light);
+  color: var(--text-primary-light);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: var(--page-bg-dark);
+  color: var(--text-primary-dark);
+}
+
+/* ==================== FORCE ALL TEXT ==================== */
+body * {
+  color: var(--text-primary-light);
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+body.dark-mode * {
+  color: var(--text-primary-dark) !important;
+}
+
+/* ==================== BUTTONS ==================== */
+button {
+  background-color: var(--accent-primary);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+/* ==================== INPUTS ==================== */
+input, textarea, select {
+  background-color: var(--card-bg-light);
+  color: var(--text-primary-light);
+  border: 1px solid var(--border-light);
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: var(--card-bg-dark);
+  color: var(--text-primary-dark);
+  border: 1px solid var(--border-dark);
+}
+
+/* ==================== CARDS ==================== */
+.card, .panel {
+  background-color: var(--card-bg-light);
+  color: var(--text-primary-light);
+  border-radius: 12px;
+  padding: 16px;
+  border: 1px solid var(--border-light);
+  transition: all 0.3s ease;
+}
+
+body.dark-mode .card,
+body.dark-mode .panel {
+  background-color: var(--card-bg-dark);
+  color: var(--text-primary-dark);
+  border: 1px solid var(--border-dark);
+}
+
+/* ==================== HEADINGS & TEXT ==================== */
+h1,h2,h3,h4,h5,h6,p,span,label,a,li,small {
+  color: inherit;
+}

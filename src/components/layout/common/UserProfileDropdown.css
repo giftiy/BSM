@@ -1,0 +1,8 @@
+.user-profile-dropdown { position: relative; }
+.profile-activator { display: flex; align-items: center; gap: 0.75rem; cursor: pointer; }
+.profile-activator img { width: 40px; height: 40px; border-radius: 50%; }
+.profile-info { display: flex; flex-direction: column; }
+.user-name { font-weight: 600; } .user-role { font-size: 0.8rem; color: var(--text-secondary); }
+.dropdown-menu { position: absolute; top: 120%; right: 0; background-color: var(--card-bg); border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 180px; z-index: 10; overflow: hidden; }
+.dropdown-menu a { display: block; padding: 0.75rem 1rem; text-decoration: none; color: var(--text-primary); }
+.dropdown-menu a:hover { background-color: var(--primary-color-light); }

@@ -1,0 +1,5 @@
+/* /src/pages/admin/AuditLog.css */
+/* CSS baayyee isa UserManagement.css wajjin walfakkaata */
+.audit-log-container { padding: 1.5rem; background-color: var(--card-bg); border-radius: 12px; }
+.page-header h1 { font-size: 1.8rem; margin-bottom: 1.5rem; }
+/* .table-wrapper, .custom-table, etc. will reuse styles from UserManagement.css if imported globally or can be copied here */
