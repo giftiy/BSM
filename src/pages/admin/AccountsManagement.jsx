@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../components/layout/admin/AdminLayout';
 import { FaLock, FaLockOpen } from 'react-icons/fa';
-import '../staff/ManageCustomers.css'; // CSS isa duraanii irraa fayyadamna
+import '../staff/ManageCustomers.css'; 
 
 const mockAccounts = [
   { id: '100012345678', owner: 'Lensa Tadesse', type: 'Savings', balance: 5450.75, status: 'Active' },
