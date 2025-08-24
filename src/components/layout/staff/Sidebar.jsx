@@ -53,7 +53,7 @@ const Sidebar = () => {
       </nav>
       <div className="sidebar-footer">
         {/* Logout yeroo baayyee function waama, kanaaf <a> ta'uu danda'a */}
-        <a href="#" className="nav-link logout">
+        <a href="/login" className="nav-link logout">
           <FaSignOutAlt />
           <span>Logout</span>
         </a>

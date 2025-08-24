@@ -1,19 +1,9 @@
-/* /src/assets/styles/DashboardStyles.css */
 
-/* === KUTAA DURAANII KAN POPOVERS JEDHU HAQII, KANAAN BAKKA BUUSI === */
-
-/*
- * ===========================================
- *   POPOVERS (PROFESSIONAL & COMPACT REDESIGN)
- * ===========================================
- */
-
-/* 5.1 - PARENT-TTI POSITION KENNUU (Akkuma duraanii barbaachisaadha) */
 .navbar-actions {
   position: relative; 
 }
 
-/* 5.2 - POPOVER XIQQEESSUU, AMMAYYEESSUU, FI ANIMATION DABALUU */
+
 .notification-popover, .profile-dropdown {
   position: absolute;
   top: calc(100% + 12px);

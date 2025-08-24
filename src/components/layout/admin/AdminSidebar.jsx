@@ -37,7 +37,7 @@ const AdminSidebar = () => {
         <NavLink to="/admin/reports" className="nav-link"><FaChartLine /><span>Reports</span></NavLink>
         <NavLink to="/admin/reset-password" className="nav-link"><FaKey /><span>Reset Password</span></NavLink>
       </nav>
-      <div className="sidebar-footer"><a href="#" className="nav-link logout"><FaSignOutAlt /><span>Logout</span></a></div>
+      <div className="sidebar-footer"><a href="/login" className="nav-link logout"><FaSignOutAlt /><span>Logout</span></a></div>
     </aside>
   );
 };

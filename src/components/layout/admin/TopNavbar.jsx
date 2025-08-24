@@ -3,14 +3,14 @@
 import React from 'react';
 import { FaSearch, FaSun, FaMoon } from 'react-icons/fa';
 
-// VVVV --- Koodii kana akkuma jirutti waraabaa (COPY PASTE godhaa) --- VVVV
+
 import UserProfileDropdown from '/src/components/layout/common/UserProfileDropdown.jsx';
 // AAAA ------------------------------------------------------------------- AAAA
 
 import './TopNavbar.css';
 
 const TopNavbar = ({ onThemeToggle, theme, searchTerm, onSearchChange }) => {
-  // ... koodiin keessan inni hafe akkuma duraanitti ...
+  
   return (
     <header className="top-navbar">
       <div className="search-wrapper">

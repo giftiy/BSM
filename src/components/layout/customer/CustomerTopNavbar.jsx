@@ -1,32 +1,47 @@
-// /src/components/layout/customer/CustomerTopNavbar.jsx
+// Faayilii: /src/components/layout/customer/CustomerTopNavbar.jsx
 
-// eslint-disable-next-line no-unused-vars
-import React, { useState, useContext, useRef, useEffect } from "react";
+import React, { useContext } from "react";
 import { FaBell, FaMoon, FaSun } from "react-icons/fa";
+import { useNavigate } from 'react-router-dom'; // <== KANA IMPORT GODHAA
 import { ThemeContext } from "../../../context/ThemeContext";
-import { useAuth } from "../../../context/AuthContext";
+import UserProfileDropdown from '../common/UserProfileDropdown.jsx';
 import './CustomerLayout.css';
 
 const CustomerTopNavbar = () => {
-    // eslint-disable-next-line no-unused-vars
-    const [openNotif, setOpenNotif] = useState(false);
     const { theme, toggleTheme } = useContext(ThemeContext);
-    const { user, logout } = useAuth();
-    const notifRef = useRef(null);
+    const navigate = useNavigate(); // <== useNavigate hook fayyadamna
+
+    // Funkishinii gara fuula notifications geessu
+    const goToNotifications = () => {
+        navigate('/customer/notifications');
+    };
 
     return (
         <nav className="top-navbar-customer">
-            <h2>Welcome, {user?.fullName || 'Customer'}!</h2>
+            {/* VVVV --- BARRUUN "CUSTOMER PORTAL" ASII BAHEERA --- VVVV */}
+            <div className="navbar-brand-customer">
+                {/* Iddoon kun amma duwwaadha */}
+            </div>
+            {/* AAAA -------------------------------------------- AAAA */}
+
             <div className="navbar-actions">
+                {/* Theme Toggle */}
                 <button onClick={toggleTheme} className="theme-toggle-btn">
                     {theme === 'light' ? <FaMoon /> : <FaSun />}
                 </button>
-                <div className="notification-wrapper" ref={notifRef}>
-                    <button className="notification-btn" onClick={() => setOpenNotif(p => !p)}>
-                        <FaBell /> <span className="notification-badge">3</span>
+
+                {/* VVVV --- NOTIFICATIONS BUTTON KAN JIJJIIRAME --- VVVV */}
+                <div className="notification-wrapper">
+                    {/* onClick isaa amma goToNotifications waama */}
+                    <button className="notification-btn" onClick={goToNotifications}>
+                        <FaBell /> 
+                        <span className="notification-badge">3</span>
                     </button>
                 </div>
-                <button onClick={logout} className="logout-btn-nav">Logout</button>
+                {/* AAAA ---------------------------------------------- AAAA */}
+
+                {/* Profile Dropdown */}
+                <UserProfileDropdown />
             </div>
         </nav>
     );

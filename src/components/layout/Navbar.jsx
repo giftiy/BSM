@@ -159,6 +159,7 @@ const profileImageStyle = {
 };
 
 // ================= PROFILE DROPDOWN =================
+// eslint-disable-next-line no-unused-vars
 const ProfileDropdown = ({ customer, theme, navigate }) => {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");

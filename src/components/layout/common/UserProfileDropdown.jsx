@@ -1,20 +1,96 @@
-// /src/components/layout/common/UserProfileDropdown.jsx
+// Faayilii: /src/components/layout/common/UserProfileDropdown.jsx
 
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // <== Link import godhaa
+import React, { useState, useRef } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../../../context/AuthContext';
+import { FaUser, FaEnvelope, FaShieldAlt, FaKey, FaArrowLeft } from 'react-icons/fa';
 import './UserProfileDropdown.css';
 
-// onOpenChangePassword prop haaraa fudhata
-const UserProfileDropdown = ({ onOpenChangePassword }) => {
+const UserProfileDropdown = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [view, setView] = useState('menu');
   const { user, logout } = useAuth();
+  const navigate = useNavigate();
+  
+  // VVVV --- JIJJIIRAMA GUDDAA --- VVVV
+  const timerRef = useRef(null); // Timer too'achuuf ref fayyadamna
+
+  const handleMouseEnter = () => {
+    clearTimeout(timerRef.current); // Timer duraan jiru haqa
+    setIsOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    // Daqiiqaa muraasa booda akka cufamu goona
+    timerRef.current = setTimeout(() => {
+      setIsOpen(false);
+      setView('menu'); // Gara menu jalqabaatti deebisa
+    }, 300); // 300ms (0.3 seconds)
+  };
+  // AAAA ------------------------------ AAAA
 
   if (!user) return null;
 
+  const handleLogout = () => {
+    logout();
+    navigate('/login');
+  };
+  
+  const handlePasswordChange = (e) => {
+      e.preventDefault();
+      alert("Password changed successfully! (Demo)");
+      setView('menu');
+  };
+
+  const renderContent = () => {
+    switch (view) {
+      case 'profile':
+        return (
+          <div className="dropdown-view">
+            <button className="back-btn" onClick={() => setView('menu')}><FaArrowLeft /> Back</button>
+            <div className="profile-summary">
+              <img src={`https://i.pravatar.cc/80?u=${user.id}`} alt="Profile" />
+              <h4>{user.fullName}</h4>
+              <p>{user.email}</p>
+            </div>
+            <div className="profile-details">
+                <p><FaUser /> <strong>Full Name:</strong> {user.fullName}</p>
+                <p><FaEnvelope /> <strong>Email:</strong> {user.email}</p>
+                <p><FaShieldAlt /> <strong>Role:</strong> {user.role}</p>
+            </div>
+          </div>
+        );
+      case 'password':
+        return (
+          <div className="dropdown-view">
+            <button className="back-btn" onClick={() => setView('menu')}><FaArrowLeft /> Back</button>
+            <form className="change-password-form" onSubmit={handlePasswordChange}>
+                <h5><FaKey/> Change Your Password</h5>
+                <input type="password" placeholder="Current Password" required />
+                <input type="password" placeholder="New Password" required />
+                <input type="password" placeholder="Confirm New Password" required />
+                <button type="submit">Update Password</button>
+            </form>
+          </div>
+        );
+      default:
+        return (
+          <>
+            <button onClick={() => setView('profile')} className="dropdown-item">View Profile</button>
+            <button onClick={() => setView('password')} className="dropdown-item">Change Password</button>
+            <button onClick={handleLogout} className="dropdown-item logout-link">Logout</button>
+          </>
+        );
+    }
+  };
+
   return (
-    <div className="user-profile-dropdown" onMouseLeave={() => setIsOpen(false)}>
-      <div className="profile-activator" onMouseEnter={() => setIsOpen(true)}>
+    // VVVV --- onMouseEnter/Leave asitti fayyadamna --- VVVV
+    <div className="user-profile-dropdown" 
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
+    >
+      <div className="profile-activator">
         <img src={`https://i.pravatar.cc/40?u=${user.id}`} alt="Profile" />
         <div className="profile-info">
           <span className="user-name">{user.fullName}</span>
@@ -22,10 +98,8 @@ const UserProfileDropdown = ({ onOpenChangePassword }) => {
         </div>
       </div>
       {isOpen && (
-        <div className="dropdown-menu">
-          <Link to="/profile" className="dropdown-item">View Profile</Link>
-          <button onClick={onOpenChangePassword} className="dropdown-item">Change Password</button>
-          <button onClick={logout} className="dropdown-item logout-link">Logout</button>
+        <div className="dropdown-menu wide">
+          {renderContent()}
         </div>
       )}
     </div>

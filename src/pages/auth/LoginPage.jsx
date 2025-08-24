@@ -1,72 +1,72 @@
 // Faayilii: /src/pages/auth/LoginPage.jsx
-// Waan duraan keessa jiru hunda kanaan bakka buusaa
 
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.jsx';
-// import ThemeToggle from '../../components/common/ThemeToggle.jsx'; // Yoo barbaaddan
-import '../../assets/styles/Auth.css'; // Faayilii CSS waliinii fayyadamna
+import { FaShieldAlt, FaMobileAlt, FaUniversity } from 'react-icons/fa';
+import '../../assets/styles/Auth.css';
 
 const LoginPage = () => {
   const [userId, setUserId] = useState('');
   const [password, setPassword] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const navigate = useNavigate();
-  const { user, loading, login } = useAuth();
-
-  // Yoo duraan seenee jiraate, ofumaan gara daashbordii geessa
-  useEffect(() => {
-    if (!loading && user) {
-      if (user.role === 'staff') navigate('/staff/dashboard');
-      else if (user.role === 'customer') navigate('/dashboard');
-      else if (user.role === 'admin') navigate('/admin/dashboard');
-    }
-  }, [user, loading, navigate]);
+  const { login } = useAuth();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!userId) return alert("Please provide a User ID (e.g., 'admin', 'staff', 'customer')");
+    if (!userId) return alert("Please provide a User ID");
     
+    setIsSubmitting(true);
     try {
-      await login({ userId, password });
-      // Navigatiin ofumaan 'useEffect' keessatti hojjetama
+      const loggedInUser = await login({ userId, password });
+      
+      // Navigatiin ofumaan AppRoutes keessatti akka hojjetuuf xiqqoo eegna
+      // Haa ta'u malee, UX saffisaa ta'eef asitti qajeelchuun gaariidha.
+      if (loggedInUser.role === 'staff') navigate('/staff/dashboard', { replace: true });
+      else if (loggedInUser.role === 'customer') navigate('/dashboard', { replace: true });
+      else if (loggedInUser.role === 'admin') navigate('/admin/dashboard', { replace: true });
+
     } catch (error) {
       console.error("Login failed:", error);
-      alert("Login failed. Please check credentials.");
+      alert("Login failed. Please check your credentials.");
+      setIsSubmitting(false);
     }
   };
 
-  if (loading || user) {
-    return <div className="auth-container"><div>Loading...</div></div>;
-  }
-
   return (
     <div className="auth-container">
-      <div className="auth-bg"></div>
-      {/* <ThemeToggle /> */}
       <div className="auth-card">
         <div className="auth-panel branding-panel">
-          <h1 className="logo">Bank Management System</h1>
-          <p className="description">Advanced, secure, and intuitive financial solutions for the modern world.</p>
+            <div className="brand-content">
+                <div className="logo-container"> <FaShieldAlt /> <span>SecureBank</span> </div>
+                <h1 className="tagline">Digital Banking, Redefined.</h1>
+                <p className="description">Experience seamless and secure banking right at your fingertips. Your financial partner for a brighter future.</p>
+                <div className="feature-showcase">
+                    <div className="feature-item"> <FaMobileAlt /> <span>Mobile Access</span> </div>
+                    <div className="feature-item"> <FaUniversity /> <span>Global Reach</span> </div>
+                    <div className="feature-item"> <FaShieldAlt /> <span>Trusted Security</span> </div>
+                </div>
+            </div>
         </div>
         <div className="auth-panel form-panel">
           <form onSubmit={handleSubmit} className="auth-form">
             <div className="form-header">
-              <h2 className="title">Welcome Back</h2>
-              <p className="subtitle">Please enter your details to sign in.</p>
+              <h2 className="title">Sign In</h2>
+              <p className="subtitle">Welcome back! Please enter your details.</p>
             </div>
             <div className="form-group">
-              <input type="text" placeholder="User ID (e.g., admin, staff, customer)" className="form-input" value={userId} onChange={(e) => setUserId(e.target.value)} required />
+              <input type="text" placeholder="User ID (admin, staff, customer)" className="form-input" value={userId} onChange={(e) => setUserId(e.target.value)} required disabled={isSubmitting} />
             </div>
             <div className="form-group">
-              <input type="password" placeholder="Password" className="form-input" value={password} onChange={(e) => setPassword(e.target.value)} required />
+              <input type="password" placeholder="Password" className="form-input" value={password} onChange={(e) => setPassword(e.target.value)} required disabled={isSubmitting} />
             </div>
-            <div className="form-options">
-              <label className="form-checkbox"> <input type="checkbox" /> Stay signed in </label>
-              <Link to="/forgot-password" className="form-link">Forgot Password?</Link>
-            </div>
-            <button type="submit" className="form-button">LOGIN</button>
+            {/* "Forgot Password" fi "Remember me" haqamaniiru */}
+            <button type="submit" className="form-button" disabled={isSubmitting}>
+              {isSubmitting ? 'Signing In...' : 'Sign In'}
+            </button>
             <p className="form-footer">
-              Don't have an account? <Link to="/register" className="form-link">Create one</Link>
+              Don't have an account? <Link to="/register" className="form-link">Register Now</Link>
             </p>
           </form>
         </div>
