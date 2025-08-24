@@ -3,7 +3,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
-// VVVV --- SIRREEFFAMNI AS JIRA: 'FaExchangeAlt' dabalaa --- VVVV
+
 import {
   FaShieldAlt,
   FaChartLine,
@@ -11,13 +11,13 @@ import {
   FaFileInvoice,
   FaUsers,
   FaUniversity,
-  FaExchangeAlt, // KANA ITTI DABALAA
+  FaExchangeAlt, 
   FaSignOutAlt,
   FaKey,
   FaBell
   
 } from 'react-icons/fa';
-// AAAA -------------------------------------------------------- AAAA
+
 
 import '../staff/Sidebar.css';
 
@@ -30,7 +30,7 @@ const AdminSidebar = () => {
         <NavLink to="/admin/users" className="nav-link"><FaUserCog /><span>Users</span></NavLink>
         <NavLink to="/admin/audit-logs" className="nav-link"><FaFileInvoice /><span>Audit Logs</span></NavLink>
 
-        {/* Amma kuni sirriitti hojjeta */}
+        
         <NavLink to="/admin/all-transactions" className="nav-link"><FaExchangeAlt /><span>All Transactions</span></NavLink>
           <NavLink to="/admin/notification" className="nav-link"><FaBell /><span>Notification</span></NavLink>
         <NavLink to="/admin/accounts" className="nav-link"><FaUsers /><span>Accounts</span></NavLink>

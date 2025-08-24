@@ -2,10 +2,10 @@ import React from 'react';
 import '../../assets/styles/Common.css';
 
 /**
- * Komponentii Table data agarsiisuuf.
+ * 
  * @param {object} props
- * @param {Array<{header: string, accessor: string}>} props.columns - Mata duree tarree
- * @param {Array<object>} props.data - Data agarsiifamu
+ * @param {Array<{header: string, accessor: string}>} props.columns 
+ * @param {Array<object>} props.data 
  */
 const Table = ({ columns, data }) => {
   return (

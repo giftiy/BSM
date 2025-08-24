@@ -2,12 +2,9 @@
 
 import React, { useState, useContext, useEffect, useRef } from "react";
 import { FaComments, FaTimes } from "react-icons/fa";
-// VVVV --- DAANDII CONTEXT SIRREESSAA --- VVVV
-import { ThemeContext } from "../../../context/ThemeContext";
-// AAAA ------------------------------------ AAAA
 
-// Hubachiisa: CSS faayiliin biraa hin barbaachisu, inline style fayyadama
-// Kanaafuu 'import ./StaffChatWidget.css' haqameera
+import { ThemeContext } from "../../../context/ThemeContext";
+
 
 const StaffChatWidget = () => {
   const { theme } = useContext(ThemeContext);

@@ -8,7 +8,7 @@ import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContai
 import CardlessWithdrawalPage from './CardlessWithdrawalModal';
 import './CustomerDashboard.css';
 
-// Daataa fakkeenyaaf
+
 const chartData = [
   { name: 'Jan', income: 4200, expenses: 3000 },
   { name: 'Feb', income: 3800, expenses: 3500 },

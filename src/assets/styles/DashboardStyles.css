@@ -8,15 +8,15 @@
   position: absolute;
   top: calc(100% + 12px);
   right: 0;
-  width: 320px; /* Bal'ina xiqqeesseera */
+  width: 320px; 
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
   border-radius: 12px;
-  /* Gaaddidduu ammayyaa'aa fi laafaa */
+  
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
   z-index: 100;
   opacity: 0;
-  transform: translateY(-10px) scale(0.98); /* Animation-iif */
+  transform: translateY(-10px) scale(0.98); 
   transition: opacity 0.2s ease-out, transform 0.2s ease-out;
   visibility: hidden;
 }
@@ -33,7 +33,7 @@
 }
 .popover-header h4 {
   margin: 0;
-  font-size: 0.85rem; /* xiqqeesseera */
+  font-size: 0.85rem; 
   font-weight: 600;
 }
 
@@ -41,11 +41,11 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  max-height: 320px; /* Yoo baayyate akka scroll qabaatuuf */
+  max-height: 320px; 
   overflow-y: auto;
 }
 
-/* SCROLLBAR AMMAYYEESSUU (Akka inni hin mul'anne yoo hin barbaachifne) */
+
 .popover-list::-webkit-scrollbar {
   width: 6px;
 }
@@ -59,8 +59,8 @@
 
 .popover-list li {
   display: flex;
-  gap: 0.75rem; /* xiqqeesseera */
-  padding: 0.75rem 1rem; /* xiqqeesseera */
+  gap: 0.75rem; 
+  padding: 0.75rem 1rem; 
   border-bottom: 1px solid var(--border-color);
   cursor: pointer;
   transition: background-color 0.2s;
@@ -75,7 +75,7 @@
 }
 
 .popover-list-icon {
-  font-size: 0.9rem; /* xiqqeesseera */
+  font-size: 0.9rem;
   color: var(--text-secondary);
   margin-top: 3px;
   flex-shrink: 0;
@@ -88,18 +88,18 @@
 
 .popover-list-content p {
   margin: 0;
-  font-size: 0.8rem; /* xiqqeesseera */
+  font-size: 0.8rem;
   line-height: 1.4;
   color: var(--text-primary);
 }
 .popover-list-content small {
-  font-size: 0.7rem; /* xiqqeesseera */
+  font-size: 0.7rem; 
   color: var(--text-secondary);
   margin-top: 2px;
 }
 
 .popover-footer {
-  padding: 0.6rem; /* xiqqeesseera */
+  padding: 0.6rem; 
   text-align: center;
   font-weight: 500;
   font-size: 0.8rem;

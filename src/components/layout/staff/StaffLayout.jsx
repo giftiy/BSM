@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Sidebar from './Sidebar';
 import TopNavbar from './TopNavbar';
-import StaffChatWidget from './StaffChatWidget'; // Daandii sirreessameera
+import StaffChatWidget from './StaffChatWidget';
 import './StaffLayout.css';
 
 const StaffLayout = ({ children, searchTerm, onSearchChange }) => {
@@ -20,7 +20,7 @@ const StaffLayout = ({ children, searchTerm, onSearchChange }) => {
   }, [theme]);
 
   return (
-    // VVVV --- SIRREEFFAMNI AS JIRA --- VVVV
+  
     <>
       <div className="staff-layout">
         <Sidebar />

@@ -1,11 +1,11 @@
-// Faayilii: /src/pages/customer/MyAccounts.jsx
+
 
 import React, { useState } from 'react';
 import CustomerLayout from '../../components/layout/customer/CustomerLayout';
 import { FaUniversity, FaPiggyBank, FaCreditCard, FaEllipsisH, FaPlusCircle } from 'react-icons/fa';
 import './CustomerPages.css'; 
 
-// Daataa fakkeenyaaf kan bal'ifame
+
 const mockAccounts = [
   { 
     id: 1, type: 'Checking Account', number: '1000-1234-5678-9012', balance: 5420.50, status: 'Active', 
@@ -44,7 +44,7 @@ const MyAccounts = () => {
         
         <div className="my-accounts-layout">
             
-            {/* KUTAA BITAA: Tarreeffama Herregaa */}
+            
             <div className="account-list-section">
                 {mockAccounts.map(account => (
                     <div 
@@ -66,7 +66,7 @@ const MyAccounts = () => {
                 </div>
             </div>
 
-            {/* KUTAA MIRGAA: Bal'ina Herrega Filatamee */}
+           
             <div className="account-details-section">
                 <div className="details-card-header">
                     <h2>{selectedAccount.type}</h2>

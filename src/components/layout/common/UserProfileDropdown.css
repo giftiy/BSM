@@ -1,13 +1,9 @@
-/* =================================================================
-   USER PROFILE DROPDOWN - DIZAYINII GEENGOO FI PROFESSIONAL
-   ================================================================= */
 
-/* --- Konteenerii Guddaa --- */
 .user-profile-dropdown {
   position: relative;
 }
 
-/* --- Qaama Dropdown Banaa (Piroofaayilii + Maqaa) --- */
+
 .profile-activator {
   display: flex;
   align-items: center;
@@ -22,15 +18,15 @@
   background-color: var(--hover-bg);
 }
 
-/* VVVV --- JIJJIIRAMNI SUURAA XIQQAAF AS JIRA --- VVVV */
+
 .profile-activator img {
   width: 38px;
   height: 38px;
-  border-radius: 50%; /* Kun geengoo taasisa */
-  object-fit: cover;   /* Suuraan akka hin fafacaaneef */
+  border-radius: 50%; 
+  object-fit: cover;   
   border: 2px solid var(--border-color);
 }
-/* AAAA ----------------------------------------- AAAA */
+
 
 
 .profile-info {
@@ -49,7 +45,6 @@
   text-transform: capitalize;
 }
 
-/* --- Menu Isa Gadi Bu'u (Dropdown Menu) --- */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
 .dropdown-menu.wide {
@@ -66,22 +61,22 @@
   animation: fadeIn 0.2s ease-out;
 }
 
-/* --- Kutaa Piroofaayilii Guddichaaf --- */
+
 .dropdown-view { padding: 0.5rem; }
 .back-btn { display: flex; align-items: center; gap: 0.5rem; background: none; border: none; cursor: pointer; font-weight: 500; color: var(--text-secondary); margin-bottom: 0.75rem; }
 .profile-summary { text-align: center; padding: 0.5rem 0; }
 
-/* VVVV --- JIJJIIRAMNI SUURAA GUDDAAF AS JIRA --- VVVV */
+
 .profile-summary img {
   width: 80px;
   height: 80px;
-  border-radius: 50%; /* Kun geengoo taasisa */
-  object-fit: cover;   /* Suuraan akka hin fafacaaneef */
+  border-radius: 50%; 
+  object-fit: cover;   
   margin-bottom: 0.75rem;
-  /* Sarara bareedaa naannoo isaatti uumuuf */
+ 
   box-shadow: 0 0 0 4px var(--card-bg), 0 0 0 6px var(--primary-color);
 }
-/* AAAA ----------------------------------------- AAAA */
+
 
 .profile-summary h4 { margin: 0.5rem 0 0.25rem 0; }
 .profile-summary p { margin: 0; font-size: 0.9rem; color: var(--text-secondary); }
@@ -89,12 +84,12 @@
 .profile-details p { display: flex; align-items: center; gap: 0.75rem; font-size: 0.9rem; margin: 0.75rem 0; }
 .profile-details strong { font-weight: 500; }
 
-/* --- Foormii Jecha Darbii --- */
+
 .change-password-form h5 { display: flex; align-items: center; gap: 0.5rem; margin: 0.5rem 0; }
 .change-password-form input { width: 100%; padding: 0.7rem; margin-bottom: 0.5rem; border-radius: 6px; border: 1px solid var(--border-color); background: var(--main-bg); }
 .change-password-form button { width: 100%; padding: 0.7rem; margin-top: 0.5rem; border: none; border-radius: 6px; background-color: var(--primary-color); color: #fff; cursor: pointer; }
 
-/* --- Filannoowwan Menu --- */
+
 .dropdown-item { display: block; width: 100%; padding: 0.75rem 1rem; text-decoration: none; color: var(--text-primary); background: none; border: none; text-align: left; cursor: pointer; font-size: 0.9rem; font-weight: 500; border-radius: 8px; transition: background-color 0.2s ease, color 0.2s ease; }
 .dropdown-item:hover { background-color: var(--primary-color); color: #fff; }
 .logout-link { border-top: 1px solid var(--border-color); margin-top: 0.5rem; color: var(--danger-color); }

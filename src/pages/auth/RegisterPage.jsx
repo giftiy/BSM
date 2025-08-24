@@ -60,7 +60,7 @@ const RegisterPage = () => {
                 <div className="logo-container"> <FaShieldAlt /> <span>SecureBank</span> </div>
                 <h1 className="tagline">Your Financial Future Starts Here.</h1>
                 <p className="description">Join thousands of satisfied users who trust us with their financial needs. Quick, easy, and secure registration.</p>
-                {/* VVVV --- ICON-OOTA HAARAA FI FOOYYA'AN --- VVVV */}
+               
                 <div className="feature-showcase">
                     <div className="feature-item">
                         <FaUserPlus />
@@ -75,7 +75,7 @@ const RegisterPage = () => {
                         <span>24/7 Support</span>
                     </div>
                 </div>
-                {/* AAAA ----------------------------------------- AAAA */}
+                
             </div>
         </div>
       </div>

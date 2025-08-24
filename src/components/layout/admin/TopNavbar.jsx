@@ -1,11 +1,11 @@
-// Faayilii: /src/components/layout/staff/TopNavbar.jsx
+
 
 import React from 'react';
 import { FaSearch, FaSun, FaMoon } from 'react-icons/fa';
 
 
 import UserProfileDropdown from '/src/components/layout/common/UserProfileDropdown.jsx';
-// AAAA ------------------------------------------------------------------- AAAA
+
 
 import './TopNavbar.css';
 

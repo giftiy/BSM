@@ -1,26 +1,20 @@
-/* =================================================================
-   TOP NAVIGATION BAR STYLING
-   ================================================================= */
 
-/* Konteenerii Guddaa Navbar */
 .top-navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 2rem; /* Padding hir'ifameera */
+  padding: 0.75rem 2rem; 
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
-  height: 64px; /* Dheerina dhaabbataa kenneeraaf */
-  position: sticky; /* Akka gubbaatti maxxanee hafuuf */
+  height: 64px; 
+  position: sticky; 
   top: 0;
   z-index: 999;
   transition: background-color 0.3s, border-color 0.3s;
 }
 
 
-/* =================================================================
-   Kutaa Barbaachaa (Search Wrapper)
-   ================================================================= */
+
 .search-wrapper {
   position: relative;
   width: 100%;
@@ -38,10 +32,10 @@
 
 .search-bar {
   width: 100%;
-  padding: 0.7rem 1rem 0.7rem 2.5rem; /* Padding bitaa icon-iif iddoo kenna */
+  padding: 0.7rem 1rem 0.7rem 2.5rem; 
   border-radius: 8px;
   border: 1px solid var(--border-color);
-  background-color: var(--main-bg); /* Akka qaama gobootti walfakkaata */
+  background-color: var(--main-bg); 
   color: var(--text-primary);
   font-size: 0.95rem;
   outline: none;
@@ -54,13 +48,11 @@
 }
 
 
-/* =================================================================
-   Gochaawwan Navbar (Actions: Theme, Profile)
-   ================================================================= */
+
 .navbar-actions {
   display: flex;
   align-items: center;
-  gap: 1.5rem; /* Fageenya icon theme fi piroofaayilii gidduu */
+  gap: 1.5rem; 
 }
 
 .theme-toggle-btn {
@@ -87,16 +79,14 @@ body[data-theme='dark'] .theme-toggle-btn:hover {
 }
 
 
-/* =================================================================
-   RESPONSIVE (Yeroo Screen Jijjiiramu)
-   ================================================================= */
+
 @media (max-width: 768px) {
   .top-navbar {
     padding: 0.75rem 1rem;
   }
   
   .search-wrapper {
-    /* Yoo barbaachisaa ta'e, search bar xiqqeessuu ykn dhoksuu dandeenya */
+    
     max-width: 250px;
   }
   

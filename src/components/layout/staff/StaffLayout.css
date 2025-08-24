@@ -1,4 +1,4 @@
-/* Diizaayinii Waliigalaa fi Theme */
+
 :root {
   --primary-color: #007bff;
   --primary-color-light: #e6f2ff;
@@ -14,7 +14,7 @@ body[data-theme='dark'] {
   --text-primary: #f8f9fa; --text-secondary: #adb5bd; --border-color: #495057;
 }
 body { background-color: var(--main-bg); color: var(--text-primary); transition: background-color 0.3s, color 0.3s;}
-/* Caasaa Waliigalaa */
+
 .staff-layout { display: flex; }
-.main-container { flex-grow: 1; margin-left: 260px; /* Bal'ina Sidebar wajjin walqixa */ }
+.main-container { flex-grow: 1; margin-left: 260px;  }
 .content-area { padding: 2rem; }

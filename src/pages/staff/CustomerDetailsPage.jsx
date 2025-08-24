@@ -4,9 +4,9 @@ import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import StaffLayout from '../../components/layout/staff/StaffLayout';
 import { FaUser, FaEnvelope, FaPhone, FaArrowLeft, FaEdit, FaSave, FaTimes } from 'react-icons/fa';
-import './CustomerDetailsPage.css'; // Faayilii CSS haaraa ni uumna
+import './CustomerDetailsPage.css'; 
 
-// Daataa fakkeenyaaf - Appii dhugaa keessatti kuni API irraa dhufa
+
 const mockCustomersData = [
   { id: 101, fullName: 'Lensa Tadesse', email: 'lensa.t@example.com', phone: '0911223344', joinDate: '2025-08-22', status: 'Active', accountNumber: '100012345678', accountType: 'Savings', balance: 5450.75, address: 'Bole, Addis Ababa' },
   { id: 102, fullName: 'Bona Megersa', email: 'bona.m@example.com', phone: '0922334455', joinDate: '2025-08-21', status: 'Active', accountNumber: '100098765432', accountType: 'Business', balance: 15200.00, address: 'CMC, Addis Ababa' },
@@ -19,7 +19,7 @@ const CustomerDetailsPage = () => {
   const [customer, setCustomer] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
   
-  // Daataa maamilaa 'fech' gochuu (fakkeessu)
+ 
   useEffect(() => {
     const foundCustomer = mockCustomersData.find(c => c.id === parseInt(id));
     setCustomer(foundCustomer);
@@ -46,7 +46,7 @@ const CustomerDetailsPage = () => {
         <Link to="/staff/manage-customers" className="back-link"><FaArrowLeft /> Back to Customers</Link>
 
         <div className="details-grid">
-          {/* Kutaa Bitaa: Piroofaayilii */}
+         
           <div className="profile-section">
             <div className="details-card profile-header">
               <img src={`https://i.pravatar.cc/100?u=${customer.id}`} alt="Customer" />
@@ -80,7 +80,7 @@ const CustomerDetailsPage = () => {
             )}
           </div>
           
-          {/* Kutaa Mirgaa: Odeeffannoo Herregaa */}
+        
           <div className="activity-section">
             <div className="details-card">
                 <h3>Account Summary</h3>

@@ -1,6 +1,4 @@
-/* Faayilii: /src/components/layout/staff/Sidebar.css */
 
-/* Konteenerii Guddaa Sidebar */
 .sidebar {
   width: 260px;
   background-color: var(--sidebar-bg);
@@ -10,13 +8,13 @@
   top: 0;
   border-right: 1px solid var(--border-color);
   
-  /* VVVV --- SIRREEFFAMNI BARBAACHISAAN AS JIRA --- VVVV */
+  
   display: flex;
-  flex-direction: column; /* Qaamolee waljala tarreessa */
+  flex-direction: column; 
   /* AAAA -------------------------------------------- AAAA */
 }
 
-/* Mata-duree Sidebar */
+
 .sidebar-brand {
   display: flex;
   align-items: center;
@@ -25,19 +23,19 @@
   font-size: 1.2rem;
   color: var(--primary-color);
   border-bottom: 1px solid var(--border-color);
-  flex-shrink: 0; /* Akka hin qiqixanneef */
+  flex-shrink: 0; 
 }
 .sidebar-brand h2 {
   margin: 0;
   color: var(--text-primary);
 }
 
-/* Kutaa Liinkiiwwanii */
+
 .sidebar-nav {
-  /* VVVV --- SIRREEFFAMNI AS JIRA --- VVVV */
-  flex-grow: 1; /* Iddoo hafe hunda fudhata */
-  overflow-y: auto; /* Yoo liinkiin baay'ate, akka scroll ta'uuf */
-  /* AAAA ---------------------------- AAAA */
+  
+  flex-grow: 1; 
+  overflow-y: auto; 
+  
   padding-top: 1rem;
 }
 
@@ -61,13 +59,12 @@
   background-color: var(--hover-bg);
 }
 
-/* Kutaa Miiljalee (Footer) */
+
 .sidebar-footer {
   padding: 1rem;
   border-top: 1px solid var(--border-color);
-  /* VVVV --- SIRREEFFAMNI AS JIRA --- VVVV */
-  flex-shrink: 0; /* Akka gaditti hin dhiibamne, iddoo mataa isaa qabata */
-  /* AAAA ---------------------------- AAAA */
+  
+  flex-shrink: 0; 
 }
 
 .nav-link.logout {
@@ -76,7 +73,7 @@
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  justify-content: flex-start; /* Akka barruun bitaatti siquuf */
+  justify-content: flex-start;
   padding: 1rem;
 }
 .nav-link.logout:hover {

@@ -4,9 +4,9 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import StaffLayout from '../../components/layout/staff/StaffLayout';
 import { FaEye, FaEdit, FaTrash } from 'react-icons/fa';
-import './ManageCustomers.css'; // Faayilii CSS haaraa ni uumna
+import './ManageCustomers.css'; 
 
-// Daataa fakkeenyaaf kan fooyya'e
+
 const mockCustomers = [
   { id: 101, fullName: 'Lensa Tadesse', accountNumber: '100012345678', joinDate: '2025-08-22', status: 'Active' },
   { id: 102, fullName: 'Bona Megersa', accountNumber: '100098765432', joinDate: '2025-08-21', status: 'Active' },
@@ -30,7 +30,7 @@ const ManageCustomers = () => {
   );
   
   return (
-    // Fuulli kun guutuun StaffLayout keessa jira
+ 
     <StaffLayout searchTerm={searchTerm} onSearchChange={(e) => setSearchTerm(e.target.value)}>
       <div className="manage-customers-container">
         <div className="page-header">
@@ -57,7 +57,7 @@ const ManageCustomers = () => {
                   <td>{customer.joinDate}</td>
                   <td><span className={`status ${customer.status.toLowerCase()}`}>{customer.status}</span></td>
                   <td className="actions-cell">
-                    {/* Liinkiin gara fuula bal'inaatti geessu */}
+                   
                     <Link to={`/staff/customer-details/${customer.id}`} className="action-btn view">
                         <FaEye /> View
                     </Link>
@@ -71,7 +71,7 @@ const ManageCustomers = () => {
                 </tr>
               ))}
               
-              {/* Yoo maamilli hin argamne */}
+           
               {filteredCustomers.length === 0 && (
                   <tr>
                       <td colSpan="5" className="no-results">No customers found matching your search.</td>

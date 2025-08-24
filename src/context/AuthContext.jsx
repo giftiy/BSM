@@ -1,18 +1,17 @@
-// Koodii kana faayilii /src/context/AuthContext.jsx keessa galchaa
+
 
 import React, { useState, createContext, useEffect, useContext } from 'react';
 
-// Context uumame, garuu export hin taane. Bakka isaa, hook fayyadamna.
+
 const AuthContext = createContext(null);
 
-// VVVV --- HOOK KANA FAYYADAMNA --- VVVV
-// Hook salphaa komponentii biroo keessatti context argachuuf
+
 // eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => {
   return useContext(AuthContext);
 };
 
-// Provider uumamee export godhame
+// Provider 
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);

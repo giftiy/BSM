@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import AdminLayout from '../../components/layout/admin/AdminLayout';
-import './AdminViewTransactions.css'; // Faayilii CSS haaraa ni uumna
+import './AdminViewTransactions.css'; 
 
-// Daataa fakkeenyaa bal'aa
+
 const allTransactionsData = [
     { id: 'TXN728', customer: 'Lensa Tadesse', amount: 1500, type: 'Deposit', date: '2025-08-22', status: 'Completed', branch: 'Bole' },
     { id: 'TXN729', customer: 'Bona Megersa', amount: -300, type: 'Withdrawal', date: '2025-08-22', status: 'Completed', branch: 'CMC' },

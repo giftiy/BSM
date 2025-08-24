@@ -1,17 +1,13 @@
-/* =================================================================
-   FUULA "NOTIFICATIONS" - CSS Kan Of Danda'e
-   ================================================================= */
 
-/* Konteenerii Guddaa Fuula Kanaaf */
 .notification-page-container {
   background-color: var(--card-bg);
   border-radius: 12px;
   border: 1px solid var(--border-color);
-  padding: 1rem; /* Padding keessaa xiqqeefameera */
+  padding: 1rem; 
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
-/* Mata-duree Fuulaa */
+
 .page-header {
   padding-bottom: 0.75rem;
   margin-bottom: 1.5rem;
@@ -28,7 +24,6 @@
   color: var(--text-secondary);
 }
 
-/* Gochaawwan Beeksisootaa (fkn. Clear All) */
 .notification-actions {
     display: flex;
     justify-content: flex-end;
@@ -54,7 +49,7 @@
     color: #fff;
 }
 
-/* Tarreeffama Beeksisootaa */
+
 .notification-list {
   list-style: none;
   padding: 0;
@@ -74,11 +69,11 @@
   border-bottom: none;
 }
 
-/* Beeksisoota hin dubbifamne */
+
 .notification-item.unread {
   background-color: var(--primary-color-light);
-  cursor: pointer; /* Akka tuqamuu danda'u agarsiisa */
-  font-weight: 600; /* Barruun akka furdatu taasisa */
+  cursor: pointer; 
+  font-weight: 600; 
 }
 body[data-theme='dark'] .notification-item.unread {
     background-color: rgba(0, 123, 255, 0.1);
@@ -88,7 +83,7 @@ body[data-theme='dark'] .notification-item.unread {
     background-color: var(--hover-bg);
 }
 
-/* Mallattoo (Icon) Beeksisootaa */
+
 .notification-icon {
   width: 45px;
   height: 45px;
@@ -97,13 +92,13 @@ body[data-theme='dark'] .notification-item.unread {
   align-items: center;
   justify-content: center;
   font-size: 1.3rem;
-  flex-shrink: 0; /* Akka hin qiqixanneef */
+  flex-shrink: 0; 
 }
 .notification-icon.success { background-color: rgba(40, 167, 69, 0.1); color: var(--green); }
 .notification-icon.warning { background-color: rgba(255, 193, 7, 0.1); color: #ffc107; }
 .notification-icon.info { background-color: rgba(0, 123, 255, 0.1); color: var(--primary-color); }
 
-/* Qabiyyee Beeksisootaa */
+
 .notification-content {
   flex-grow: 1;
 }
@@ -117,16 +112,16 @@ body[data-theme='dark'] .notification-item.unread {
   font-size: 0.8rem;
 }
 
-/* Tuqaa Diimaa kan beeksisoota hin dubbifamne agarsiisu */
+
 .unread-dot {
     width: 10px;
     height: 10px;
     background-color: var(--primary-color);
     border-radius: 50%;
-    margin-left: auto; /* Gara mirgaatti siqsa */
+    margin-left: auto; 
 }
 
-/* Yoo beeksisni hin jiru ta'e */
+
 .no-notifications {
     text-align: center;
     padding: 3rem 1rem;
@@ -151,7 +146,7 @@ body[data-theme='dark'] .notification-item.unread {
   animation: fadeIn 0.3s ease-in-out;
 }
 
-/* Box keessaa */
+/* Box */
 .modal-content {
   background: var(--card-bg);
   padding: 2rem;

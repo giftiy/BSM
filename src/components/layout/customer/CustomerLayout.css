@@ -1,31 +1,24 @@
-/* =================================================================
-   CUSTOMER LAYOUT: Caasaa Waliigalaa fi Sidebar
-   ================================================================= */
 
-/* Caasaa Waliigalaa */
 .customer-layout {
   display: flex;
 }
 .main-container {
   flex-grow: 1;
-  margin-left: 260px; /* Bal'ina Sidebar wajjin walqixa */
+  margin-left: 260px; 
   display: flex;
   flex-direction: column;
-  height: 100vh; /* Dheerina guutuu akka qabaatuuf */
-}
+  height: 100vh;}
 .content-area {
   padding: 2rem;
   background-color: var(--main-bg);
   flex-grow: 1;
-  overflow-y: auto; /* Yoo qabiyyeen dheerate, akka scroll ta'uuf */
+  overflow-y: auto; 
 }
 
-/* =================================================================
-   SIDEBAR (Qajeelfama Cinaa)
-   ================================================================= */
+
 .sidebar {
   width: 260px;
-  background-color: var(--card-bg); /* Bifni isaa akka kaardiitti ifa */
+  background-color: var(--card-bg);
   height: 100vh;
   position: fixed;
   left: 0;
@@ -61,15 +54,15 @@
   align-items: center;
   gap: 1rem;
   padding: 1rem 1.5rem;
-  margin: 0.25rem 0.75rem; /* Fageenya naannoo isaa */
-  border-radius: 8px; /* Qoochoo qalla'aa */
+  margin: 0.25rem 0.75rem; 
+  border-radius: 8px; 
   color: var(--text-secondary);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.2s ease;
 }
 
-/* `NavLink`-iif, class "active" ofumaan kennama */
+
 .sidebar-link.active {
   background-color: var(--primary-color);
   color: #fff;
@@ -90,7 +83,7 @@
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  /* Akka sidebar-link-tti walfakkaata */
+
   display: flex;
   align-items: center;
   gap: 1rem;
@@ -103,9 +96,7 @@
 }
 
 
-/* =================================================================
-   TOPNAVBAR (Qajeelfama Gubbaa)
-   ================================================================= */
+
 .top-navbar-customer {
   display: flex;
   justify-content: space-between;
@@ -113,7 +104,7 @@
   padding: 0.75rem 2rem;
   background-color: var(--card-bg);
   border-bottom: 1px solid var(--border-color);
-  flex-shrink: 0; /* Akka hin qiqixanneef */
+  flex-shrink: 0; 
 }
 .top-navbar-customer h2 {
     margin: 0;
@@ -128,7 +119,7 @@
   gap: 1rem;
 }
 
-/* Logout button kan TopNavbar keessaa */
+
 .logout-btn-nav {
   background-color: var(--danger-color);
   color: white;

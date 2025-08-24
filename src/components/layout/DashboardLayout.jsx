@@ -13,8 +13,7 @@ const DashboardLayout = ({ children }) => {
 
   return (
     <div className="dashboard-container">
-      <Sidebar /> {/* Remove any Cardless click props here */}
-      
+      <Sidebar />
       <main className="main-content">
         <Navbar 
           onNotificationClick={() => { setShowNotifications(!showNotifications); setShowProfile(false); }}

@@ -6,7 +6,7 @@ import { FaArrowUp, FaArrowDown, FaFilePdf } from 'react-icons/fa';
 import jsPDF from 'jspdf';
 // eslint-disable-next-line no-unused-vars
 import html2canvas from 'html2canvas';
-import './MyTransactions.css'; // <== KUNI JIRAANNAN GAARIIDHA
+import './MyTransactions.css'; 
 
 const mockTransactions = [
   { id: 1, date: '2025-08-20', description: 'Salary Deposit', type: 'credit', amount: 1200 },
@@ -41,7 +41,7 @@ const MyTransactions = () => {
                 <tr key={tx.id}>
                   <td>{tx.date}</td>
                   <td>{tx.description}</td>
-                  {/* Class name sirreeffameera */}
+                  
                   <td className={`transaction-type ${tx.type}`}>
                     {tx.type === 'credit' ? <FaArrowDown /> : <FaArrowUp />} {tx.type}
                   </td>

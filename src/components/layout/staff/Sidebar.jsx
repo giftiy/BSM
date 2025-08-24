@@ -1,13 +1,13 @@
 // /src/components/layout/staff/Sidebar.jsx
 
 import React from 'react';
-import { NavLink } from 'react-router-dom'; // <a> bakka bu'uuf NavLink fayyadamna
+import { NavLink } from 'react-router-dom'; 
 import { 
   FaTachometerAlt, 
   FaExchangeAlt, 
   FaUserCheck, 
   FaUserPlus, 
-  FaUsers, // Icon haaraa manage customers-iif
+  FaUsers, 
   FaSignOutAlt, 
   FaUniversity 
 } from 'react-icons/fa';
@@ -21,7 +21,7 @@ const Sidebar = () => {
         <h2>Staff Panel</h2>
       </div>
       <nav className="sidebar-nav">
-        {/* VVVV --- LIINKIIWWAN HUNDI NAVLINK-TTI JIJJIIRAMANIIRU --- VVVV */}
+        
 
         <NavLink to="/staff/dashboard" className="nav-link" end>
           <FaTachometerAlt />
@@ -43,7 +43,7 @@ const Sidebar = () => {
           <span>Create Account</span>
         </NavLink>
 
-        {/* === LIINKII HAARAA KANA ITTI DABALAA === */}
+        
         <NavLink to="/staff/manage-customers" className="nav-link">
           <FaUsers />
           <span>Manage Customers</span>
@@ -52,7 +52,7 @@ const Sidebar = () => {
         {/* AAAA -------------------------------------------------------- AAAA */}
       </nav>
       <div className="sidebar-footer">
-        {/* Logout yeroo baayyee function waama, kanaaf <a> ta'uu danda'a */}
+       
         <a href="/login" className="nav-link logout">
           <FaSignOutAlt />
           <span>Logout</span>

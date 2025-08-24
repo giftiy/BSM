@@ -3,7 +3,7 @@
 import React from 'react';
 import CustomerSidebar from './CustomerSidebar';
 import CustomerTopNavbar from './CustomerTopNavbar';
-import ChatWidget from '../ChatWidget'; // ChatWidget waliinii
+import ChatWidget from '../ChatWidget';
 import './CustomerLayout.css';
 
 const CustomerLayout = ({ children }) => {

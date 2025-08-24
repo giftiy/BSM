@@ -1,4 +1,4 @@
-// Faayilii: /src/components/layout/Sidebar.jsx (ykn CustomerSidebar.jsx)
+//src/components/layout/Sidebar.jsx 
 
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
@@ -11,13 +11,13 @@ import {
   FaSignOutAlt, 
   FaPiggyBank 
 } from 'react-icons/fa';
-// VVVV --- SIRREEFFAMNI ISA GUDDAAN AS JIRA --- VVVV
-import { useAuth } from '../../context/AuthContext.jsx'; // DAANDII SIRRIIN KANA
+
+import { useAuth } from '../../context/AuthContext.jsx'; 
 // AAAA -------------------------------------------- AAAA
 import './Layout.css';
 
 const Sidebar = () => {
-  const { logout } = useAuth(); // Amma sirriitti hojjeta
+  const { logout } = useAuth(); 
   const location = useLocation();
 
   const customerLinks = [
@@ -39,7 +39,7 @@ const Sidebar = () => {
           <Link 
             key={link.path} 
             to={link.path} 
-            // active class sirnaan akka hojjetuuf fooyya'eera
+            
             className={`sidebar-link ${location.pathname === link.path ? 'active' : ''}`}
           >
             {link.icon} <span>{link.text}</span>

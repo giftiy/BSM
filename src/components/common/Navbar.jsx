@@ -30,7 +30,7 @@ const Navbar = () => {
         </nav>
       )}
 
-      {/* Right side: Actions */}
+      
       <div className="nav-actions">
         <LanguageSwitcher />
         <ThemeToggle />

@@ -1,45 +1,39 @@
-/* Faayilii: /src/pages/customer/CustomerPages.css (Kan Guutummaatti Haaromfame) */
 
-/* =================================================================
-   KONTEENERII WALIINII KAN FUULA GIDDU-GALEESSATTI FIDU
-   ================================================================= */
 .page-wrapper {
-  /* VVVV --- FUULA GIDDU-GALEESSATTI FIDUUF --- VVVV */
+
   display: flex;
   flex-direction: column;
-  justify-content: center; /* Giddu-galeessa dhaabbataa */
-  align-items: center;    /* Giddu-galeessa dalgee */
-  min-height: calc(100vh - 128px); /* Dheerina Navbar gadi bu'a (64px topbar + padding) */
+  justify-content: center; 
+  align-items: center;    
+  min-height: calc(100vh - 128px); 
   /* AAAA ----------------------------------- AAAA */
 }
 
 .page-container {
-  width: 100%; /* Bal'ina guutuu fudhata */
-  max-width: 1200px; /* Garuu yoo screen guddaa ta'e hin bal'atu */
-  padding: 0 1.5rem; /* Faageenya cinaa qofa kenna */
+  width: 100%; 
+  max-width: 1200px; 
+  padding: 0 1.5rem; 
 }
 
-/* Mata-duree Fuulaa */
+
 .page-header {
   padding-bottom: 0.75rem;
   margin-bottom: 1rem;
   border-bottom: 1px solid var(--border-color);
-  text-align: center; /* Mata-dureenis giddu-galeessatti haa dhufu */
+  text-align: center;
 }
 .page-header h1 { font-size: 1.6rem; }
 .page-header p { font-size: 0.9rem; color: var(--text-secondary); }
 
-/* =================================================================
-   FUULA "MY ACCOUNTS" (Kan Qindaa'e)
-   ================================================================= */
+
 .my-accounts-layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  gap: 1.5rem; /* Fageenya xiqqoo daballee, akka addaan bahan */
+  gap: 1.5rem; 
   align-items: flex-start;
 }
 
-/* Kutaa Bitaa: Tarreeffama Herregaa */
+
 .account-list-section {
   background-color: var(--card-bg);
   border-radius: 10px;
@@ -62,7 +56,7 @@
 .account-balance-list { font-weight: 600; font-size: 0.9rem; }
 .account-list-item.add-new { color: var(--primary-color); font-weight: 600; justify-content: center; gap: 0.5rem; }
 
-/* Kutaa Mirgaa: Bal'ina Herregaa */
+
 .account-details-section {
   background-color: var(--card-bg);
   border-radius: 10px;

@@ -29,7 +29,7 @@ const CardlessWithdrawalPage = ({ onClose }) => {
     if (view === 'success' && timer > 0) {
       interval = setInterval(() => setTimer(prev => prev - 1), 1000);
     } else if (timer === 0) {
-      onClose(); // Timer dhumee modal cufa
+      onClose(); 
     }
     return () => clearInterval(interval);
   }, [view, timer, onClose]);

@@ -12,19 +12,19 @@ const UserProfileDropdown = () => {
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   
-  // VVVV --- JIJJIIRAMA GUDDAA --- VVVV
-  const timerRef = useRef(null); // Timer too'achuuf ref fayyadamna
+  
+  const timerRef = useRef(null); 
 
   const handleMouseEnter = () => {
-    clearTimeout(timerRef.current); // Timer duraan jiru haqa
+    clearTimeout(timerRef.current);
     setIsOpen(true);
   };
 
   const handleMouseLeave = () => {
-    // Daqiiqaa muraasa booda akka cufamu goona
+    
     timerRef.current = setTimeout(() => {
       setIsOpen(false);
-      setView('menu'); // Gara menu jalqabaatti deebisa
+      setView('menu'); 
     }, 300); // 300ms (0.3 seconds)
   };
   // AAAA ------------------------------ AAAA
@@ -85,7 +85,7 @@ const UserProfileDropdown = () => {
   };
 
   return (
-    // VVVV --- onMouseEnter/Leave asitti fayyadamna --- VVVV
+    
     <div className="user-profile-dropdown" 
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}

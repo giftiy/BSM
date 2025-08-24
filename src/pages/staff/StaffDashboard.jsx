@@ -6,7 +6,7 @@ import { FaArrowUp, FaArrowDown, FaRegChartBar, FaUsers } from "react-icons/fa";
 import { LineChart, Line, BarChart, Bar, PieChart, Pie, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from "recharts";
 import "./StaffDashboard.css";
 
-// VVVV --- DAATAAN JI'OOTA 12-IIF GUUTAMEERA --- VVVV
+
 const lineChartData = [ 
   { name: "Jan", Deposits: 2400, Withdrawals: 4000 }, { name: "Feb", Deposits: 1398, Withdrawals: 3000 }, 
   { name: "Mar", Deposits: 9800, Withdrawals: 2000 }, { name: "Apr", Deposits: 3908, Withdrawals: 2780 }, 
@@ -47,7 +47,7 @@ const StaffDashboard = () => {
             <ResponsiveContainer width="100%" height={200}>
               <LineChart data={lineChartData} margin={{ top: 5, right: 20, left: -25, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" /> <XAxis dataKey="name" fontSize={12} /> <YAxis fontSize={12} /> <Tooltip />
-                <Legend /> {/* <== Lejendiin jiraachuu mirkaneessi */}
+                <Legend /> 
                 <Line type="monotone" dataKey="Deposits" stroke="#28a745" dot={false} /> <Line type="monotone" dataKey="Withdrawals" stroke="#dc3545" dot={false} />
               </LineChart>
             </ResponsiveContainer>
@@ -58,7 +58,7 @@ const StaffDashboard = () => {
             <ResponsiveContainer width="100%" height={200}>
               <BarChart data={barChartData} margin={{ top: 5, right: 20, left: -25, bottom: 5 }}>
                 <CartesianGrid strokeDasharray="3 3" /> <XAxis dataKey="name" fontSize={12} /> <YAxis fontSize={12} /> <Tooltip />
-                <Legend /> {/* <== Lejendiin itti dabalame */}
+                <Legend /> 
                 <Bar dataKey="Transfers" fill="#8884d8" barSize={25} />
               </BarChart>
             </ResponsiveContainer>
@@ -72,7 +72,7 @@ const StaffDashboard = () => {
                         {pieChartData.map((entry, index) => ( <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} /> ))}
                     </Pie>
                     <Tooltip />
-                    <Legend /> {/* <== Lejendiin itti dabalame */}
+                    <Legend /> 
                 </PieChart>
             </ResponsiveContainer>
           </div>

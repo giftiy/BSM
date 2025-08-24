@@ -3,9 +3,8 @@
 import React, { useState } from 'react';
 import StaffLayout from '../../components/layout/staff/StaffLayout';
 import { FaCheckCircle, FaTimesCircle, FaEye } from 'react-icons/fa';
-import './AccountApprovalPage.css'; // Faayilii CSS haaraa ni uumna
+import './AccountApprovalPage.css'; 
 
-// Daataa fakkeenyaaf
 const approvalRequests = [
   { id: 1, applicantName: 'Lensa Tadesse', accountType: 'Savings', submittedDate: '2025-08-22', status: 'Pending', documents: ['ID Card', 'Photo'] },
   { id: 2, applicantName: 'Bona Megersa', accountType: 'Business', submittedDate: '2025-08-21', status: 'Pending', documents: ['ID Card', 'Photo', 'Business License'] },
@@ -56,7 +55,7 @@ const AccountApprovalPage = () => {
                   <td>{request.submittedDate}</td>
                   <td><span className={`status ${request.status.toLowerCase()}`}>{request.status}</span></td>
                   <td className="actions-cell">
-                    {/* Yoo Pending ta'e qofa button agarsiisi */}
+                    
                     {request.status === 'Pending' && (
                         <>
                             <button className="action-btn approve" onClick={() => handleApprove(request.id)}>

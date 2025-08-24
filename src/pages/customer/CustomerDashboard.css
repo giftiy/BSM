@@ -1,4 +1,4 @@
-/* Faayilii: /src/pages/customer/CustomerDashboard.css (Kan Guutummaatti Haaromfame) */
+
 
 .customer-dashboard-container {
   max-width: 1400px;
@@ -6,7 +6,7 @@
   padding: 0.75rem 1.5rem;
 }
 
-/* Mata-duree Fuulaa */
+
 .page-header {
   padding-bottom: 0.75rem;
   margin-bottom: 1rem;
@@ -15,7 +15,6 @@
 .page-header h1 { font-size: 1.6rem; }
 .page-header p { font-size: 0.9rem; margin-top: 0.2rem; color: var(--text-secondary); }
 
-/* Kaardiiwwan Istaatistiksii */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -53,7 +52,7 @@
 .text-success { color: var(--green); }
 .text-danger { color: var(--danger-color); }
 
-/* Kutaa Gurguddaa (Chaartii fi Daldala) */
+
 .dashboard-main-grid {
   display: grid;
   grid-template-columns: 2fr 1.2fr;
@@ -77,7 +76,7 @@
   font-size: 1rem;
 }
 
-/* Tarreeffama Daldalaa */
+
 .transaction-list { list-style: none; padding: 0; margin: 0; overflow-y: auto; flex-grow: 1; }
 .transaction-item { display: flex; align-items: center; padding: 0.6rem 0.25rem; border-bottom: 1px solid var(--border-color); }
 .transaction-item:last-child { border-bottom: none; }

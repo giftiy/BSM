@@ -4,9 +4,8 @@ import React from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { FaUser, FaEnvelope, FaShieldAlt, FaArrowLeft } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import './ProfilePage.css'; // Faayilii CSS haaraa ni uumna
+import './ProfilePage.css'; 
 
-// Gahee kamiyyuu (staff, admin) wajjin hojjeta
 import StaffLayout from '../../components/layout/staff/StaffLayout';
 import AdminLayout from '../../components/layout/admin/AdminLayout';
 
@@ -17,10 +16,10 @@ const ProfilePage = () => {
     return <div>Loading profile...</div>;
   }
 
-  // Layout sirrii filachuu gahee irratti hundaa'uun
+  
   const Layout = user.role === 'admin' ? AdminLayout : StaffLayout;
 
-  // Daandii deebii sirrii filachuu
+ 
   const backPath = user.role === 'admin' ? '/admin/dashboard' : '/staff/dashboard';
 
   return (

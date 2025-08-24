@@ -2,19 +2,18 @@
 
 import React, { useState, useContext } from 'react';
 import StaffLayout from '../../components/layout/staff/StaffLayout';
-import { ThemeContext } from '../../context/ThemeContext'; // Theme context fayyadamna
-import './TransactionsPage.css'; // Faayilii CSS haaraa ni uumna
+import { ThemeContext } from '../../context/ThemeContext'; 
+import './TransactionsPage.css'; 
 
-// Daataa fakkeenyaaf (bal'ifameera)
 const allTransactions = [
   { id: 'TXN72836', customer: 'John Doe', amount: 500, type: 'Withdrawal', date: '2025-08-20', status: 'Completed', branch: 'Bole', initiatedBy: 'Abebe K.' },
   { id: 'TXN92743', customer: 'Jane Smith', amount: 1200, type: 'Deposit', date: '2025-08-19', status: 'Completed', branch: 'CMC', initiatedBy: 'Chaltu B.' },
   { id: 'TXN10384', customer: 'Mark Johnson', amount: 300, type: 'Transfer', date: '2025-08-18', status: 'Pending', branch: 'Sarbet', initiatedBy: 'Mark J.' },
   { id: 'TXN54829', customer: 'Alice Brown', amount: 450, type: 'Withdrawal', date: '2025-08-16', status: 'Failed', branch: '4 Kilo', initiatedBy: 'Abebe K.' },
-  // ... dabalata
+  
 ];
 
-// Komponentii xiqqaa kan bal'ina ibsuuf (Modal)
+
 const TransactionDetailModal = ({ transaction, onClose }) => {
     return (
         <div className="modal-overlay" onClick={onClose}>
@@ -41,7 +40,7 @@ const TransactionDetailModal = ({ transaction, onClose }) => {
 
 const TransactionsPage = () => {
   // eslint-disable-next-line no-unused-vars
-  const { theme } = useContext(ThemeContext); // Theme argachuuf
+  const { theme } = useContext(ThemeContext); 
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTransaction, setSelectedTransaction] = useState(null);
 
@@ -87,7 +86,7 @@ const TransactionsPage = () => {
         </div>
       </div>
       
-      {/* Yoo transeekshiniin filatame, Modal agarsiisi */}
+      
       {selectedTransaction && (
           <TransactionDetailModal 
               transaction={selectedTransaction} 

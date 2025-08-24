@@ -176,7 +176,7 @@
 }
 
 .btn-close:hover { background-color: #006f95; }
-/* Overlay covering whole screen and centering modal */
+
 .notification-modal-overlay {
   position: fixed;
   top: 0;

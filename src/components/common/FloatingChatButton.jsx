@@ -1,7 +1,7 @@
-// /src/components/common/FloatingChatButton.jsx
+
 import React, { useState } from 'react';
 import { FaComments, FaTimes, FaPaperPlane } from 'react-icons/fa';
-import './Redesign.css'; // CSS haaraa waliinii fayyadamna
+import './Redesign.css';
 
 const FloatingChatButton = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,7 @@ const FloatingChatButton = () => {
             <h3>Support Chat</h3>
           </div>
           <div className="chat-body">
-            {/* Ergaawwan asitti mul'atu */}
+           
             <div className="message received">Hi! How can I help you today?</div>
           </div>
           <div className="chat-footer">

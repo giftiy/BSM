@@ -6,7 +6,7 @@ import { FaUsers, FaUniversity, FaExclamationTriangle, FaClipboardList } from 'r
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import './AdminDashboard.css';
 
-// ... Daataa akkuma duraanitti ...
+
 const summaryData = [ { name: 'Customers', value: 1250 }, { name: 'Staff', value: 75 }, { name: 'Admins', value: 5 }, ];
 const activityData = [ { name: 'Logins', count: 540 }, { name: 'Transfers', count: 210 }, { name: 'Approvals', count: 45 }, { name: 'New Accounts', count: 15 },];
 
@@ -30,7 +30,7 @@ const AdminDashboard = () => {
         <div className="charts-grid">
             <div className="chart-card">
                 <h3>User Roles Distribution</h3>
-                {/* VVVV --- Dheerinyi fi Margin Jijjiiramaniiru --- VVVV */}
+               
                 <ResponsiveContainer width="100%" height={210}>
                     <BarChart data={summaryData} margin={{ top: 5, right: 20, left: -25, bottom: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" />
@@ -44,7 +44,7 @@ const AdminDashboard = () => {
             </div>
             <div className="chart-card">
                 <h3>System Activity Today</h3>
-                {/* VVVV --- Dheerinyi fi Margin Jijjiiramaniiru --- VVVV */}
+                
                 <ResponsiveContainer width="100%" height={210}>
                     <BarChart data={activityData} margin={{ top: 5, right: 20, left: -25, bottom: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" />

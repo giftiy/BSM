@@ -1,8 +1,8 @@
-// /src/components/common/ChangePasswordModal.jsx
+
 
 import React from 'react';
 import { FaTimes } from 'react-icons/fa';
-import './ChangePasswordModal.css'; // Faayilii CSS haaraa ni uumna
+import './ChangePasswordModal.css'; 
 
 const ChangePasswordModal = ({ isOpen, onClose }) => {
   if (!isOpen) return null;
